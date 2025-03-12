@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hot6's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="home-content">
+                <div>
+                    <h1 class="typing-text">Whitehacker 박현욱의 포트폴리오</h1>
+                    <p></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="section-container">
+                <h2>About</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="about-title">화이트해커를 꿈꾸는<br>박현욱입니다.</p>
+                        <p class="about-description">
+                            보안 전문가를 향한 열정과 도전으로 성장하고 있습니다.<br>
+                            혁신적인 보안 솔루션을 통해 더 안전한 디지털 세상을 만들어가고자 합니다.
+                        </p>
+                    </div>
+                    <!-- <div class="about-image">
+                        <img src="img/profile.jpg" alt="박현욱 프로필">
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <div class="skill-item">
+                        <img src="img/python.png" alt="Python">
+                        <span>Python</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <img src="img/vscode.png" alt="VSC">
+                            <span>VSCode</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="img/ida.png" alt="IDA">
+                            <span>IDA</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="img/nmap.png" alt="Nmap">
+                            <span>Nmap</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Etc</h3>
+                    <div class="skill-item">
+                        <img src="img/linux.png" alt="Linux">
+                        <span>Linux</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <div class="section-container">
+                <h2>Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card" data-url="https://demo-day-front.vercel.app/">
+                        <div class="project-content">
+                            <div class="project-image">
+                                <img src="img/SW동행_logo.png" alt="SW동행 프로젝트" class="project-logo">
+                            </div>
+                            <div class="project-info">
+                                <div class="project-header">
+                                    <h3>SW동행<br>데모데이</h3>
+                                    <span class="project-badge">Featured</span>
+                                </div>
+                                <div class="project-details">
+                                    <p>SW동행 데모데이 프로젝트에서 습지와 기온에 상관관계를 분석한 데이터를 시각화한 웹사이트를 제작했습니다. 
+                                        저의 역할은 파이썬을 이용하여 공공데이터에서 찾은 내용을 분석하고, 정보로 가공하였습니다. 또한 지리분석툴인 QGIS를 이용하여 지리분석을 수행하였습니다.</p>
+                                    <div class="tech-stack">
+                                        <span>Python</span>
+                                        <span>React</span>
+                                        <span>QGIS</span>
+                                    </div>
+                                    <div class="project-awards">
+                                        <div class="award-header">
+                                            <span class="award-icon">🏆</span>
+                                            <span class="award-title">대상 수상</span>
+                                        </div>
+                                        <div class="award-certificate">
+                                            <img src="img/SW동행_데모데이_상장.jpg" alt="데모데이 상장" class="certificate-img">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-url="https://github.com/hyun071111/langfit">
+                        <div class="project-content">
+                            <div class="project-image">
+                                <img src="img/langfit_logologo.png" alt="LangFit 프로젝트" class="project-logo">
+                            </div>
+                            <div class="project-info">
+                                <div class="project-header">
+                                    <h3>LangFit</h3>
+                                    <span class="project-badge">AI</span>
+                                </div>
+                                <div class="project-details">
+                                    <p>MBTI처럼 질문의 선택으로 프로그래밍 언어를 추천해주는 웹사이트입니다. 언어의 대한 추천 영상도 있으며, llama ai를 사용하여 본인이 작성한 코드에 대해 물어볼 수 있도록 개발하였습니다. 저의 역할은 ai 챗봇 개발이였습니다. llama ai를 huggingface에서 가져와서 사용하여 개발하였습니다.</p>
+                                    <div class="tech-stack">
+                                        <span>Python</span>
+                                        <span>TensorFlow</span>
+                                        <span>FastAPI</span>
+                                    </div>
+                                    <div class="project-awards">
+                                        <div class="award-header">
+                                            <span class="award-icon">🏆</span>
+                                            <span class="award-title">우수상 수상</span>
+                                        </div>
+                                        <div class="award-certificate">
+                                            <img src="img/langfit_상장.jpg" alt="랭핏 상장" class="certificate-img">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-github-url="https://github.com/hot6/SecureAudit">
+                        <div class="project-content">
+                            <div class="project-image">
+                                <img src="img/security.png" alt="보안 프로젝트" class="project-logo">
+                            </div>
+                            <div class="project-info">
+                                <div class="project-header">
+                                    <h3>SecureAudit</h3>
+                                    <span class="project-badge">Security</span>
+                                </div>
+                                <div class="project-details">
+                                    <p>자동화된 보안 취약점 분석 도구. 실시간 모니터링과 상세한 리포트 생성을 지원합니다.</p>
+                                    <div class="tech-stack">
+                                        <span>Python</span>
+                                        <span>Nmap</span>
+                                        <span>Linux</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-github-url="https://github.com/hot6/Portfolio">
+                        <div class="project-content">
+                            <div class="project-image">
+                                <img src="img/portfolio.png" alt="포트폴리오" class="project-logo">
+                            </div>
+                            <div class="project-info">
+                                <div class="project-header">
+                                    <h3>Portfolio</h3>
+                                    <span class="project-badge">Web</span>
+                                </div>
+                                <div class="project-details">
+                                    <p>모던한 디자인과 반응형 레이아웃을 적용한 개인 포트폴리오 웹사이트입니다.</p>
+                                    <div class="tech-stack">
+                                        <span>HTML</span>
+                                        <span>CSS</span>
+                                        <span>JavaScript</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p></p>
+    </footer>
+
+    <script src="script.js"></script>    
+</body>
+</html>
