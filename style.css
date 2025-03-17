@@ -706,7 +706,7 @@ footer {
     color: #00ff00;
     font-size: clamp(1.4rem, 2vw, 2.2rem);
     line-height: 1.6;
-    min-height: 25vh;
+    min-height: 30vh;
     position: relative;
 }
 
