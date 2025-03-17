@@ -109,3 +109,33 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+const typedTextElement = document.getElementById('typed-text');
+const commandOutputElement = document.getElementById('command-output');
+const cursor = document.querySelector('.cursor');
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function typeText(element, text, speed = 100) {
+    for (let i = 0; i < text.length; i++) {
+        element.textContent += text[i];
+        await sleep(speed);
+    }
+}
+
+async function startAnimation() {
+    await sleep(800); // 시작 전 잠시 대기
+    await typeText(typedTextElement, 'cat Portfolio', 100);
+    await sleep(500);
+
+    // 명령어는 그대로 두고 커서만 숨김
+    cursor.style.display = 'none';
+    
+    // 출력 텍스트 표시 (애니메이션은 CSS로 처리)
+    commandOutputElement.textContent = '박현욱의 PORTFOLIO';
+}
+
+// 페이지 로드 시 바로 애니메이션 시작
+window.addEventListener('load', startAnimation);
