@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +12,6 @@
     <title>hot6's Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <header>
         <nav>
@@ -33,11 +31,27 @@
 
     <main>
         <section id="home">
-            <div class="home-content">
-                <div>
-                    <h1 class="typing-text">Whitehacker 박현욱의 포트폴리오</h1>
-                    <p></p>
+            <div class="terminal-container">
+                <div class="terminal-section">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <div class="terminal-button terminal-close"></div>
+                            <div class="terminal-button terminal-minimize"></div>
+                            <div class="terminal-button terminal-maximize"></div>
+                        </div>
+                    </div>
+                    <div class="terminal-content">
+                        <div class="command-line">
+                            <span id="prompt">root@portfolio:~# </span>
+                            <span id="typed-text"></span>
+                            <span class="cursor"></span>
+                        </div>
+                        <div id="command-output" class="output-text"></div>
+                    </div>
                 </div>
+            </div>
+            <div class="linux-container">
+                <img src="img/linux.gif" alt="Linux Animation" class="linux-background">
             </div>
         </section>
 
@@ -89,7 +103,7 @@
                 <div class="skill-category">
                     <h3>Etc</h3>
                     <div class="skill-item">
-                        <img src="img/linux.png" alt="Linux">
+                        <img src="img/ubuntu.png" alt="Linux">
                         <span>Linux</span>
                     </div>
                 </div>
@@ -217,8 +231,6 @@
     <footer>
         <p></p>
     </footer>
-
     <script src="script.js"></script>
 </body>
-
 </html>
