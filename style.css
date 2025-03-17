@@ -16,7 +16,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(28, 32, 38, 0.95);
+    background: rgba(28, 32, 38, 0.7) !important;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     z-index: 1000;
@@ -131,13 +131,20 @@ section h2 {
 
 /* 홈 섹션 */
 #home {
-  background-color: #f4f4f4;
+  background-color: #F8F9F8 !important;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   overflow: hidden;
+  padding: 0 !important;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
 }
 
 .home-content {
@@ -629,7 +636,7 @@ footer {
     }
     
     .about-description {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
     }
 
     .project-content {
@@ -782,5 +789,248 @@ footer {
     .skill-item img {
         width: 35px;
         height: 35px;
+    }
+}
+
+.terminal-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    padding: 0 2rem;
+}
+
+.terminal-section {
+    width: 100%;
+    max-width: 1200px;
+    background-color: rgba(30, 30, 30, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+}
+
+.terminal-header {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #2d2d2d;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom: 1px solid #3d3d3d;
+}
+
+.terminal-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.terminal-button {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    transition: opacity 0.3s;
+}
+
+.terminal-button:hover {
+    opacity: 0.8;
+}
+
+.terminal-close { background-color: #ff5f56; }
+.terminal-minimize { background-color: #ffbd2e; }
+.terminal-maximize { background-color: #27c93f; }
+
+.terminal-content {
+    padding: 40px;
+    font-family: 'Courier New', monospace;
+    color: #00ff00;
+    font-size: 2rem;
+    line-height: 1.6;
+    min-height: 250px;
+    position: relative;
+}
+
+.command-line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+#prompt {
+    color: #00ff00;
+    margin-right: 10px;
+}
+
+#typed-text, #command-output {
+    color: #00ff00;
+}
+
+.cursor {
+    display: inline-block;
+    width: 12px;
+    height: 1.2em;
+    background-color: #00ff00;
+    margin-left: 5px;
+    animation: blink 1s infinite;
+    vertical-align: middle;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.linux-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.linux-background {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+}
+
+.output-text {
+    color: #00ff00;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 0 0 15px rgba(0, 255, 0, 0.4);
+    margin-top: 1rem;
+}
+
+/* 네비게이션 바를 투명하게 만들어 첫 화면이 더 잘 보이도록 함 */
+header {
+    background: rgba(28, 32, 38, 0.7) !important;
+}
+
+/* 스크롤바 숨기기 */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* 모바일 최적화 */
+@media screen and (max-width: 768px) {
+    #home {
+        padding: 2rem 1rem !important;
+        gap: 2rem;
+    }
+
+    .terminal-container {
+        padding: 0 1rem;
+    }
+
+    .terminal-section {
+        max-width: 100%;
+    }
+
+    .terminal-content {
+        padding: 20px;
+        font-size: 1.6rem;
+        word-break: break-all;
+    }
+
+    .command-line {
+        flex-wrap: wrap;
+        margin-bottom: 1.5rem;
+    }
+
+    #prompt {
+        font-size: 1.6rem;
+        margin-right: 8px;
+        font-weight: bold;
+        text-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+    }
+
+    #typed-text {
+        font-size: 1.6rem;
+        text-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+    }
+
+    .output-text {
+        font-size: 2rem;
+        text-shadow: 0 0 15px rgba(0, 255, 0, 0.7);
+        margin-top: 1.5rem;
+    }
+
+    .cursor {
+        height: 1.6rem;
+    }
+
+    .linux-container {
+        height: 400px;
+    }
+
+    .linux-background {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        max-height: 100%;
+    }
+}
+
+/* 작은 모바일 화면 */
+@media screen and (max-width: 480px) {
+    .terminal-content {
+        padding: 15px;
+        font-size: 1.4rem;
+        min-height: 180px;
+    }
+
+    #prompt {
+        font-size: 1.4rem;
+        margin-right: 6px;
+    }
+
+    #typed-text {
+        font-size: 1.4rem;
+    }
+
+    .output-text {
+        font-size: 1.8rem;
+        margin-top: 1.2rem;
+    }
+
+    .cursor {
+        height: 1.4rem;
+        width: 10px;
+    }
+
+    .terminal-button {
+        width: 12px;
+        height: 12px;
+    }
+
+    .terminal-header {
+        padding: 10px 15px;
+    }
+
+    .linux-container {
+        height: 300px;
+    }
+}
+
+/* 가로 모드 대응 */
+@media screen and (max-height: 600px) and (orientation: landscape) {
+    #home {
+        padding: 1rem !important;
+        gap: 1rem;
+    }
+
+    .terminal-content {
+        min-height: 150px;
+        padding: 15px;
+    }
+
+    .command-line {
+        margin-bottom: 1rem;
+    }
+
+    .linux-container {
+        height: 200px;
     }
 }
