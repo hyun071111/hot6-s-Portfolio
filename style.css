@@ -198,12 +198,12 @@ h1 {
     background: #ffffff;
 }
 
+
 .skills-container {
   padding: 2rem;
   display: flex;
   justify-content: center;
   gap: 3rem;
-  flex-wrap: wrap;
 }
 
 .skill-category {
@@ -221,7 +221,6 @@ h1 {
 .skill-items {
   display: flex;
   gap: 1rem;
-  flex-wrap: wrap;
   justify-content: center;
 }
 
